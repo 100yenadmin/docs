@@ -29,7 +29,7 @@ Save your API key on the machine that runs Hermes:
 hermes fish login
 ```
 
-`login` checks the key against your Fish Audio account and saves it to the active Hermes profile. Where no speech or transcription provider is set, it selects Fish Audio; it asks before it replaces another provider.
+`login` checks the key against your Fish Audio account and saves it to the active Hermes profile. Where no speech or transcription provider is set, it selects Fish Audio. It asks before it replaces another provider; run without a terminal, it keeps the other provider unless you pass `--yes`.
 
 You can also add the key in the Hermes desktop app under **Plugins** > **Fish Audio**, or with `hermes tools` > **Text-to-Speech** > **Fish Audio**.
 
@@ -73,7 +73,7 @@ tts:
 - **Voices page in the desktop app**: browse and preview the voice library, choose the agent's voice, clone or design voices, and check your API credit.
 - **Commands**: `/fish status`, `/fish voices`, `/fish use`, `/fish model`, `/fish preview`, and `/fish balance` work in every chat. `hermes fish login`, `status`, `doctor`, and `use` work in the terminal.
 
-Synthesis, transcription, cloning, and voice design are billed to your Fish Audio API credits, except requests on the free `s2.1-pro-free` model. Cloning and deleting voices from chat go through Hermes's approval prompt; on the desktop Voices page, you confirm them on the page.
+Synthesis, transcription, cloning, and voice design are billed to your Fish Audio API credits, except requests that run on the free `s2.1-pro-free` model. Cloning and deleting voices from chat go through Hermes's approval prompt; on the desktop Voices page, you confirm them on the page.
 
 ## Resources
 
