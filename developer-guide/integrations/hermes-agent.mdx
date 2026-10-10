@@ -13,11 +13,13 @@ icon: "terminal"
 
 ## Installation
 
-Install the plugin and enable it:
+Fish Audio is in the Hermes plugin catalog. Install it and enable it:
 
 ```bash
-hermes plugins install https://github.com/100yenadmin/fish-audio-hermes --enable
+hermes plugins install fish-audio --enable
 ```
+
+With the Hermes desktop app installed, you can open [hermes://plugin/install?catalog=fish-audio](hermes://plugin/install?catalog=fish-audio) instead. The app finds Fish Audio in the catalog and asks you to confirm the install.
 
 Hermes 0.21.5 installs the plugin's Python dependencies automatically. Newer Hermes builds ask first; add `--yes-deps` to answer yes.
 
@@ -64,7 +66,7 @@ tts:
 
 ## Features
 
-- **Text-to-speech**: voice replies, read-aloud, and voice notes use Fish Audio. CLI voice mode and desktop voice replies stream sentence by sentence.
+- **Text-to-speech**: voice replies, read-aloud, and voice notes use Fish Audio. On Hermes 0.21.6 or newer, CLI voice mode and desktop voice replies stream sentence by sentence. Hermes 0.21.5 waits for each sentence in CLI voice mode, and for the whole reply in the desktop app, to finish synthesizing before it plays.
 - **Speech-to-text**: voice notes and desktop dictation are transcribed with `transcribe-1-pro`.
 - **Agent tools**:
   - `fish_speak` for expressive and multi-speaker speech, with word timestamps and subtitles;
