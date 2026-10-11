@@ -52,7 +52,14 @@ Search the voice library from any chat and switch voices:
 /fish use <voice-id>
 ```
 
-In the Hermes desktop app, open **Voices** to search the library, preview a voice, and click **Use**. To add the page, switch on **Desktop** for Fish Audio under **Capabilities** > **Plugins**, then restart the Hermes gateway once.
+Save a short name for a voice, then use the name wherever a voice ID goes:
+
+```text
+/fish alias add narrator <voice-id>
+/fish use narrator
+```
+
+In the Hermes desktop app, open **Voices** to search the library, preview a voice, and click **Use**. To add the page, switch on **Desktop** for Fish Audio under **Capabilities** > **Plugins**, then restart the Hermes gateway once. On Hermes 0.21.6 or newer, **Settings** > **Plugins** > **Fish Audio** shows the agent's voice, speech model, and saved voice names, and lets you change them.
 
 Or set a voice in the profile's `config.yaml`:
 
@@ -73,7 +80,7 @@ tts:
   - `fish_voices` to search, clone, design, and manage voices;
   - `fish_transcribe` for transcripts with speaker turns and SRT subtitles.
 - **Voices page in the desktop app**: browse and preview the voice library, choose the agent's voice, clone or design voices, and check your API credit.
-- **Commands**: `/fish status`, `/fish voices`, `/fish use`, `/fish model`, `/fish preview`, and `/fish balance` work in every chat. `hermes fish login`, `status`, `doctor`, and `use` work in the terminal.
+- **Commands**: `/fish status`, `/fish voices`, `/fish use`, `/fish model`, `/fish preview`, `/fish alias`, and `/fish balance` work in every chat. `hermes fish login`, `status`, `doctor`, and `use` work in the terminal.
 
 Synthesis, transcription, cloning, and voice design are billed to your Fish Audio API credits, except requests that run on the free `s2.1-pro-free` model. Cloning and deleting voices from chat go through Hermes's approval prompt; on the desktop Voices page, you confirm them on the page.
 
