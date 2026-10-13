@@ -74,6 +74,7 @@ tts:
 ## Features
 
 - **Text-to-speech**: voice replies, read-aloud, and voice notes use Fish Audio. On Hermes 0.21.6 or newer, CLI voice mode and desktop voice replies stream sentence by sentence. Hermes 0.21.5 waits for each sentence in CLI voice mode, and for the whole reply in the desktop app, to finish synthesizing before it plays.
+- **Drama 3**: with plugin 1.6.0 or newer, `/fish model drama-3` makes [Drama 3](/features/text-to-speech/drama-3) the agent's speech model. Directions in square brackets work in every voice reply. Agents send word tags such as `<whisper>…</whisper>` through `fish_speak`, which passes them to Fish Audio unchanged.
 - **Speech-to-text**: voice notes and desktop dictation are transcribed with `transcribe-1-pro`. On Hermes 0.21.6 or newer, set `stt.streaming: true` for live dictation: in CLI voice mode, the TUI, and the desktop composer mic, the text appears phrase by phrase while you speak. Live dictation streams microphone audio to Fish Audio's realtime endpoint and is billed per phrase at the speech-to-text price.
 - **Agent tools**:
   - `fish_speak` for expressive and multi-speaker speech, with word timestamps and subtitles;
